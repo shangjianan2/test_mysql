@@ -1,0 +1,10 @@
+E:\biancheng\mysql\0328\NBIoT\NBIoT\bin\Debug\NBIoT.exe.config
+E:\biancheng\mysql\0328\NBIoT\NBIoT\bin\Debug\NBIoT.exe
+E:\biancheng\mysql\0328\NBIoT\NBIoT\bin\Debug\NBIoT.pdb
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.csprojResolveAssemblyReference.cache
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.Form1.resources
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.Properties.Resources.resources
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.csproj.GenerateResource.Cache
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.csproj.CoreCompileInputs.cache
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.exe
+E:\biancheng\mysql\0328\NBIoT\NBIoT\obj\Debug\NBIoT.pdb
