@@ -27,9 +27,13 @@ namespace NBIoT
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
+            if (Field1_TextBox.Text == "")
+                return;
             //string str = MySqlHelper.GetDataSet(MySqlHelper.Conn, CommandType.Text, "select * from test2", null).Tables[0].Rows[3][1].ToString();
-            string str = "INSERT INTO test2 ( `id`, `name`, `type`, `gas type`, `status`, `NongDu`, `DiXian`, `GaoXian`, `DianLiang`, `WenDu`, `Date` ) VALUES ( \"4\",  \"2\",    \"2\",    \"2\",        \"2\",      \"2\",      \"2\",      \"2\",       \"2\",         \"2\",     \"2\");";
+            string str = "INSERT INTO test2 ( `id`, `name`, `type`, `gas type`, `status`, `NongDu`, `DiXian`, `GaoXian`, `DianLiang`, `WenDu`, `Date` ) VALUES ( \"" + Field1_TextBox.Text + "\",  \"2\",    \"2\",    \"2\",        \"2\",      \"2\",      \"2\",      \"2\",       \"2\",         \"2\",     \"2\");";
             MySqlHelper.GetDataSet(MySqlHelper.Conn, CommandType.Text, str, null);
+
+            Init_DataBase_ListView(this.JieDian_ListView, ref lvi_Array);
         }
 
         public void Init_DataBase_ListView(ListView listView_tt, ref ListViewItem[] lvi_tt)//MySqlHelper.GetDataSet是一个静态函数
@@ -37,6 +41,8 @@ namespace NBIoT
             DataSet dataSet_temp = MySqlHelper.GetDataSet(MySqlHelper.Conn, CommandType.Text, "select * from test2", null);///////
             DataColumnCollection temp_DataColumn = dataSet_temp.Tables[0].Columns;
             DataRowCollection temp_DataRow = dataSet_temp.Tables[0].Rows;//获取列
+
+            listView_tt.Items.Clear();//清除上次数据
 
             //添加列表头
             for (int i = 0; i < temp_DataColumn.Count; i++)
