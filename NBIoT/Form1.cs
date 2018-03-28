@@ -22,12 +22,14 @@ namespace NBIoT
         public Form1()
         {
             InitializeComponent();
+            Init_DataBase_ListView(this.JieDian_ListView, ref lvi_Array);
         }
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
             //string str = MySqlHelper.GetDataSet(MySqlHelper.Conn, CommandType.Text, "select * from test2", null).Tables[0].Rows[3][1].ToString();
-            Init_DataBase_ListView(this.JieDian_ListView, ref lvi_Array);
+            string str = "INSERT INTO test2 ( `id`, `name`, `type`, `gas type`, `status`, `NongDu`, `DiXian`, `GaoXian`, `DianLiang`, `WenDu`, `Date` ) VALUES ( \"4\",  \"2\",    \"2\",    \"2\",        \"2\",      \"2\",      \"2\",      \"2\",       \"2\",         \"2\",     \"2\");";
+            MySqlHelper.GetDataSet(MySqlHelper.Conn, CommandType.Text, str, null);
         }
 
         public void Init_DataBase_ListView(ListView listView_tt, ref ListViewItem[] lvi_tt)//MySqlHelper.GetDataSet是一个静态函数
